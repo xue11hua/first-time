@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+*{margin: 0;padding: 0}
+body{overflow: hidden;}
+li{list-style: none;}
+img{width: 200px;height: 150px;}
+ul li{width: 200px;height: 150px; margin: 10px;float: left;z-index: 1;}
+ul{width:660px;position: relative;}
+#ul .on{border: 1px solid black}
+
