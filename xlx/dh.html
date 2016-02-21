@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>导航</title>
+	<style>
+	*{margin: 0;padding: 0}
+	li{list-style: none;}
+	a{text-decoration: none;}
+	a{color:#fff;font-weight: bold;}
+	#content{width:1214px;height:512px;margin: 0 auto;}
+	#list{width:212px;height:510px;background:red;float: left;}
+	#nav{width:1000px; height:44px ;}
+	#play{width: 754px;height:466px;background: green;float: left;}
+	#right{width:248px; height: 466px;background: red;float: right;}
+	#center{float: right;}
+	#shop{position: relative;}
+	#list h2{height: 40px;}
+	#list ul li{height:36px;line-height: 36px; }
+	#list ul li a{height:36px;width: 212px;display: inline-block;text-indent: 10px;}
+	#shop_list{width:1000px;height: 460px; background:#f5f5f5;position: absolute;left:212px;top:44px; }
+	#shop_list div{height: 460px;}
+	.on{display:none;}
+	.in a{background: #fff;color: red;}
+	#shop_list dl dd{float: left;margin-left: 20px;color: #999;line-height: 25px;}
+	#shop_list dl dt{float: left;height: 50px;text-align: center;line-height: 50px;}
+	#shop_list dl{width: 754px;height: 60px;border-bottom:1px solid #999;}
+	#center #nav ul li{float: left;width:90px;text-align: center;line-height: 44px; }
+	#center #nav ul li a{width:90px;text-align: center;line-height: 44px;display: inline-block;color: black}
+	#center #nav ul li a:hover{color: red;}
+	</style>
+	<script>
+		window.onload=function(){
+			var oshop=document.getElementById('shop');
+			var oshoplist=document.getElementById('shop_list');
+			var olist=document.getElementById('list');
+			var oul=olist.getElementsByTagName('ul')[0];
+			var oli=oul.getElementsByTagName('li');
+			var odiv=oshoplist.getElementsByTagName('div');
+			var index=0;
+			oshop.onmouseover=function(){
+				oshoplist.className='';}
+				
+				
+			oshop.onmouseout=function(){
+				oshoplist.className='on';
+				for(var i=0;i<oli.length;i++){
+					oli[i].className='';
+				}
+			}
+			for(var i=0;i<odiv.length;i++){
+				odiv[i].index=i;
+				odiv[i].onmouseover=function(){
+					oli[this.index].className='in';
+					
+				}
+			}
+		
+
+			for(var i=0;i<oli.length;i++){
+				oli[i].index=i;
+					oli[i].onmouseover=function(){
+						for(var i=0;i<oli.length;i++){
+							oli[i].className='';
+							odiv[i].style.display='none';
+						}
+						
+						this.className='in';
+						odiv[this.index].style.display='block';
+					}
+				}
+			
+			
+		}
+	</script>
+</head>
+<body>
+	<div id="content">
+		<div id="shop">
+		<div id="list">
+				<h2><a href="">全部商品分类</a></h2>
+				<ul>
+					
+					<li><a href="">手机</a></li>
+					<li><a href="">电器</a></li>
+					<li><a href="">电脑</a></li>
+					<li><a href="">家具</a></li>
+					<li><a href="">衣服</a></li>
+					<li><a href="">化妆品</a></li>
+					<li><a href="">鞋</a></li>
+					<li><a href="">运动户外</a></li>
+					<li><a href="">汽车</a></li>
+					<li><a href="">母婴</a></li>
+					<li><a href="">食品</a></li>
+					<li><a href="">电器</a></li>
+					<li><a href="">电脑</a></li>
+					
+				</ul>
+			</div>
+			<div id="shop_list" class="on">
+
+				<div class="on">
+				<dl>
+					<dt>电器</dt>
+					<dd>平板电视</dd>
+					<dd>空调冰箱</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+				</dl>
+				<dl>
+					<dt>电器</dt>
+					<dd>平板电视</dd>
+					<dd>空调冰箱</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+				</dl>
+				<dl>
+					<dt>电器</dt>
+					<dd>平板电视</dd>
+					<dd>空调冰箱</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+				</dl>
+				</div>
+				<div class="on">
+					<dl>
+					<dt>电器</dt>
+					<dd>平板电视</dd>
+					<dd>空调冰箱</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+				</dl>
+				<dl>
+					<dt>电器</dt>
+					<dd>平板电视</dd>
+					<dd>空调冰箱</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+				</dl>
+				</div>
+				<div class="on">
+					<dl>
+					<dt>电器</dt>
+					<dd>平板电视</dd>
+					<dd>空调冰箱</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+				</dl>
+				<dl>
+					<dt>电器</dt>
+					<dd>平板电视</dd>
+					<dd>空调冰箱</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+					<dd>洗衣机</dd>
+					<dd>家庭影院DVD</dd>
+					<dd>迷你音响</dd>
+					<dd>热水器</dd>
+				</dl>
+				</div>
+				<div class="on">电器2</div>
+				<div class="on">电器1</div>
+				<div class="on">电器2</div>
+				<div class="on">电器1</div>
+				<div class="on">电器2</div>
+				<div class="on">电器1</div>
+				<div class="on">电器2</div>
+				<div class="on">电器1</div>
+				<div class="on">电器2</div>
+				<div class="on">电器1</div>
+			</div>
+		</div>
+		
+		<div id="center">
+			<div id="nav">
+				<ul>
+					<li><a href="">服装城</a></li>
+					<li><a href="">美妆馆</a></li>
+					<li><a href="">超市</a></li>
+					<li><a href="">全球购</a></li>
+					<li><a href="">闪购</a></li>
+					<li><a href="">团购</a></li>
+					<li><a href="">金融</a></li>
+					<li><a href="">拍卖</a></li>
+				</ul>
+			</div>
+			<div id="play">play</div>
+			<div id="right"></div>
+		</div>
+	</div>
+</body>
+</html>

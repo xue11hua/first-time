@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闪烁</title>
+	<style>
+	ul li{width: 100px;height: 100px;background: red;}
+	.in{display: none;}
+	</style>
+	<script>
+	window.onload=function(){
+		var oli=document.getElementsByTagName('li');
+		var j=0;
+		function play(){
+			setInterval(function(){
+				
+				j=j+1;
+				if(j==4){
+					j=0;
+				}
+				for(var i=0;i<oli.length;i++){
+					oli[i].style.display="none";
+				}
+				oli[j].style.display='block';
+			},300)
+		}
+		play();
+		}
+	</script>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li style="display: none;background: blue">2</li>
+		<li style="display: none;background: black">3</li>
+		<li style="display: none;background: yellow">4</li>
+	</ul>
+</body>
+</html>

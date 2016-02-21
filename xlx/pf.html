@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>评分</title>
+	<style>
+	div ul li{width: 50px;height: 50px;border: 1px solid red;}
+	.on{background: red;}
+	</style>
+	<script>
+		window.onload=function(){
+			var a=['差','一般','好'];
+			var oli=document.getElementsByTagName('li');
+			var oul=document.getElementsByTagName('ul')[0];
+			var odiv=document.getElementsByTagName('div')[1];
+			for(var i=0;i<oli.length;i++){
+				oli[i].index=i;
+				oli[i].onmouseover=function(){
+					for(var i=0;i<=this.index;i++){
+						oli[i].className='on';
+					}
+					odiv.style.display='block';
+					
+					odiv.innerHTML=a[this.index];
+
+				}
+				oli[i].onmouseout=function(){
+					for(var i=0;i<oli.length;i++){
+						oli[i].className='';
+					}
+					odiv.style.display='none';
+				}
+				oli[i].onclick=function(){
+					alert((this.index)+1+'分'+'    '+a[this.index]);
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div style="display: none;"></div>
+</body>
+</html>

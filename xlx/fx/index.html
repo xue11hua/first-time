@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<title>分享到</title>
+	<script type='text/javascript'>
+	window.onload=function(){
+		var odiv=document.getElementById('div');
+		odiv.onmouseover=function(){
+			move(10,0);
+		}
+		odiv.onmouseout=function(){
+			move(-10,-100);
+		}
+
+	}
+
+	var timer=null;
+		function move(s,t){
+			var odiv=document.getElementById('div');
+			clearInterval(timer);
+			timer=setInterval(function(){
+				if(odiv.offsetLeft==t){
+					clearInterval(timer);
+				}else{
+					odiv.style.left=odiv.offsetLeft+s+"px";
+				}
+				
+			},30)
+		}
+		
+
+	</script>
+	
+</head>
+<body>
+	<div id="div">
+		<span></span>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>无逢滚动</title>
+	<style>
+	*{margin: 0;padding:0;}
+	#box{width: 400px;height: 300px;border: 4px solid #999;margin: 0 auto;}
+	#title{width: 400px;height: 50px;background: blue;}
+	#title h1{width: 400px;height: 50px;text-align: center;line-height: 50px;color: red;}
+	#content{width: 400px;height: 250px;background: red;position: relative;overflow: hidden;}
+	#content p{height: 30px;line-height: 30px;width: 400px;text-align: center;}
+	#text{position: absolute;top:0px;}
+	</style>
+	<script>
+		window.onload=function(){
+			
+			var op=document.getElementById('text');
+			function fn(){
+				//console.log(op.offsetTop*(-1));
+				if(op.offsetTop*(-1)>op.offsetHeight/2){
+					op.style.top=0+'px';
+				}else{op.style.top=(op.offsetTop-1)+'px';}
+				
+			}
+			setInterval(fn,30);
+		}
+	</script>
+</head>
+<body>
+	<div id="box">
+		<div id="title"><h1>无逢滚动</h1></div>
+		<div id="content">
+			<div id="text">
+				<p>13人间四月芳菲尽，山寺桃花始盛开</p>
+				<p>14人间四月芳菲尽，山寺桃花始盛开</p>
+				<p>1人间四月芳菲尽，山寺桃花始盛开</p>
+				<p>2人间四月芳菲尽，山寺桃花始盛开</p>
+				<p>3人间四月芳菲尽，山寺桃花始盛开</p>
+				<p>4人间四月芳菲尽，山寺桃花始盛开</p>
+				<p>5人间四月芳菲尽，山寺桃花始盛开</p>
+				<p>6人间四月芳菲尽，山寺桃花始盛开</p>
+				<p>7人间四月芳菲尽，山寺桃花始盛开</p>
+				<p>8人间四月芳菲尽，山寺桃花始盛开</p>
+				<p>9人间四月芳菲尽，山寺桃花始盛开</p>
+				<p>10人间四月芳菲尽，山寺桃花始盛开</p>
+				<p>11人间四月芳菲尽，山寺桃花始盛开</p>
+				<p>12人间四月芳菲尽，山寺桃花始盛开</p>
+				<p>13人间四月芳菲尽，山寺桃花始盛开</p>
+				<p>14人间四月芳菲尽，山寺桃花始盛开</p>
+				<p>1人间四月芳菲尽，山寺桃花始盛开</p>
+				<p>2人间四月芳菲尽，山寺桃花始盛开</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

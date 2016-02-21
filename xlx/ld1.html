@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>联动1</title>
+	
+</head>
+<body>
+	<select name="" id="sf">
+		<option value="">省份</option>
+	</select>
+	<select name="" id="sq">
+		<option value="">市区</option>
+	</select>
+	<script>
+	window.onload=function(){
+		var a=0;
+		var sun=0;
+		var osfValue;
+		var osf=document.getElementById('sf');
+		var osq=document.getElementById('sq');
+		var osqt=osq.getElementsByTagName('option');
+		var osfArray=[];
+		var osqArray=[];
+		osfArray[0]=['山西省'];
+		osfArray[1]=['广东省'];
+		osfArray[2]=['四川省'];
+		osfArray[3]=['福建省'];
+		osqArray[0]=['山西省','山西'];
+		osqArray[1]=['广东省','广东','广东','广东','广东','广东','广东','广东','广东','广东','广东','广东','广东','广东','广东','广东','广东'];
+		osqArray[2]=['四川省','四川','四川','四川','四川','四川','四川','四川','四川'];
+		osqArray[3]=['福建省','福建','福建','福建','福建','福建','福建','福建','福建'];
+		for(var key in osfArray){//创建省
+			var option=document.createElement('option');
+			option.text=osfArray[key];
+			osf.appendChild(option);
+		}
+			osf.onchange=function(){//创建市
+				function fnt(sun){
+				for(var i=0;i<sun;i++){
+				osq.remove(osqt[i]);
+			}}
+			function fn(){	
+			for(var i=0;i<osqArray.length;i++){
+				if(osqArray[i][0]==osf.value){//联动
+					a=osqArray[i].length;
+					for(var j=1;j<a;j++){
+						var option=document.createElement('option');
+						option.text=osqArray[i][j];
+						osq.appendChild(option);
+						osq.value=osqArray[i][1];	
+					}
+				}	
+			}
+			return a;
+		}
+		fnt(a);
+		fn();
+		}
+		}
+	</script>
+</body>
+</html>
