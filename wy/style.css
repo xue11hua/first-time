@@ -1,5 +1,5 @@
 @charset "UTF-8";
-*{margin: 0;padding: 0;}
+body,div,ul,ol,li,h1,h2,h3,h4,form,p,hr,button,input{margin: 0;padding: 0;}
 li{list-style: none;}
 a{text-decoration: none;}
 body{ font-family: '微软雅黑';font-size: 14px;}
