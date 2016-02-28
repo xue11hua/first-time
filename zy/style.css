@@ -1,0 +1,29 @@
+@charset "utf-8";
+body,div,ul,li,h1,p{margin: 0;padding: 0}
+body{overflow:hidden;font-family: "微软雅黑"}
+li{list-style: none;}
+img {border:none;}
+iframe {display:block;}
+.on{background: red;color:#fff;border-radius: 5px;}
+#nav{width:1200px;height: 80px;background: #F8F8F8;position: fixed;z-index: 999;top:0px; }
+#nav li{float: left;width:142px;height: 80px;border-right: 1px solid #999;text-align: center;line-height: 80px;font-size: 25px;font-weight: bold;cursor: pointer; }
+#nav img{float: left;text-align: center;line-height: 80px; width: 266px;height: 80px;border-right: 1px solid #999;}
+.div{float: left;width: 100%;height: 100%}
+#content{position: absolute;top:0;}
+.div{position: relative;width: 100%;height: 100%;}
+.left{position: absolute;left: 0;top: 0; width: 700px;height: 500px;transition:1s;opacity: 0;z-index: 3}
+.right{position: absolute;right:0;top: 0; width: 700px;height: 500px;transition:1s;opacity: 0;z-index: 3;}
+.h_a{width: 100%;height: 100%;position: absolute;z-index: 1;}
+.h_b{position: absolute; z-index: 2}
+.right img{width: 80%;height: 80%;margin: 50px;}
+.left img{width: 80%;height: 80%;margin: 50px;}
+.right ul li:hover{opacity: 0.5;}
+#wroks ul{margin-left: 80px;}
+#wroks li{float: left;width: 240px;height: 176px;margin: 5px; text-align: center;line-height: 176px;color: #fff;font-size: 20px;font-weight: bold;}
+#wroks .wroks_1{background: url(img/wroks_1.jpg) no-repeat 100% 100%;}
+#wroks .wroks_2{background: url(img/wroks_2.jpg) no-repeat 100% 100%;}
+#wroks .wroks_3{background: url(img/wroks_3.jpg) no-repeat 100% 100%;}
+#wroks .wroks_4{background: url(img/wroks_4.jpg) no-repeat 100% 100%;}
+#photo iframe{width: 100%;height: 100%;border: none;margin-left: 80px;}
+#hot p{font-size: 20px;color: blue}
+#hot .p1{color: black;font-size: 30px;font-weight: bold;}
