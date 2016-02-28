@@ -1,0 +1,35 @@
+@charset 'utf-8';
+body,div,ul,li,p{margin: 0;padding: 0;}
+img{border:none;}
+#music{width: 640px;height:60px;background: url(img/bj.jpg) no-repeat;margin: 0 auto;}
+li{list-style: none;}
+#music li{float: left;}
+body{background: url(img/bj_1.jpg) no-repeat 100% 100%;font-weight: "微软雅黑";font-size: 16px;}
+#music .img{width: 50px;height: 50px;margin: 5px;border-radius: 10px;cursor: pointer;}
+#music .img img{width: 100%;height: 100%;border-radius: 10px;}
+#music .title{width: 100px;height: 30px; line-height: 30px;font-size: 13px;color: #fff}
+#music .play{margin: 10px;cursor: pointer;}
+#music img{width: 40px;}
+#music .list{float: right;margin:20px;color: #fff;cursor: pointer;}
+#music_start{width: 640px;height: 530px;margin: 0 auto;display: none;}
+#music_start li{clear: both;}
+#music_start .title{height: 50px;background: #494949;text-align: center;line-height: 50px;width: 640px;color: #fff}
+#music_start .text{height: 400px;background: #fff;border: 1px solid #999; width: 640px;display: inline-block;text-align: center;overflow-y: scroll;}
+#music_start img{width: 40px;}
+#music_start #jdt{background: #474747;height: 20px;position: relative;}
+#music_start #jdt span{display: inline-block;}
+#music_start #jdt .span_l{width: 500px;height: 4px;background: #fff;position: absolute;top: 8px;left: 60px;}
+#music_start #jdt .span_r{height: 4px;background: #218BD0;position: absolute;top: 8px;left: 60px;}
+#music_start #jdt .span_1{position: absolute;top: 0px;left: 0;width: 50px;text-align: center;color: #fff}
+#music_start #jdt .span_2{position: absolute;top: 0px;right: 0px;width: 50px;text-align: center;color: #fff}
+/*#music_start #btn{margin: 0 35% 0 35%;}
+#music_start #btn span{display: inline-block;margin-left: 10px;}*/
+#music_list{width: 640px;margin: 0 auto;}
+#music_list li{clear: both;border-bottom: 1px solid #999;height: 50px;color: #fff;cursor: pointer;}
+#music_list audio{display: none;}
+#music_list span{display: inline-block;height: 50px;line-height: 50px;}
+
+
+
+
+
